@@ -23,7 +23,7 @@ def load_data(data_path=config.SQL_LITE_FILE_NAME):
     WHERE d_year IS NOT NULL AND d_moy IS NOT NULL 
       AND i_class != 'None' AND i_category != 'None'
       -- TODO remove below filters
-      --AND ca_state = 'CA'
+    AND ca_state = 'CA'
     GROUP BY d_year, d_moy, ca_state, i_class, i_category
     HAVING SUM(wr_net_loss) > AVG(wr_net_loss)
     '''
