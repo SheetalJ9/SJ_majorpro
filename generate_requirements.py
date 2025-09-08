@@ -4,7 +4,16 @@ import subprocess
 def generate_requirements():
 
     # Run 'pip freeze' and capture the output
-    result = subprocess.run(['pipreqs', './src', '--print'], stdout=subprocess.PIPE, text=True)
+    #result = subprocess.run(['pipreqs', './src', '--print'], stdout=subprocess.PIPE, text=True)
+
+    import sys, subprocess
+
+    result = subprocess.run(
+        [sys.executable, "-m", "pipreqs", "./app", "--print"],
+        stdout=subprocess.PIPE,
+        text=True
+    )
+
     # Get the output as a list of strings (each string represents a package)
     packages = result.stdout.splitlines()
 
