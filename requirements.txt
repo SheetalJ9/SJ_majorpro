@@ -1,2 +1,8 @@
 pandas==2.3.2
+mlflow==3.3.2
+sqlalchemy==2.0.43
+xgboost==3.0.5
+joblib==1.5.2
+mlflow_tracing==3.3.2
 Flask==3.1.2
+scikit_learn==1.7.1
