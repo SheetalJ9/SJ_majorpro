@@ -2,7 +2,7 @@ name: Model Training
 
 on:
   schedule:
-    - cron: '0 0 30 * *'  # Runs on the last day of the month
+    - cron: '0 0 28-31 * *'  # Runs on the last day of the month
   workflow_dispatch:  # Allows manual triggering
 
 jobs:
